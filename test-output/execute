@@ -1,0 +1,22 @@
+// Dependency Graph
+digraph {
+	graph [compound=true concentrate=true rankdir=LR ranksep=0.4 style=filled]
+	node [fillcolor="#ffffff"]
+	diffbot_setup [label=<<b>diffbot_setup</b><br /><br /><i>module</i>> fillcolor="#b4d8e4" fontname=Helvetica margin=0.15 shape=rectangle style="rounded,filled"]
+	setup_falkordb [label=<<b>setup_falkordb</b><br /><br /><i>module</i>> fillcolor="#b4d8e4" fontname=Helvetica margin=0.15 shape=rectangle style="rounded,filled"]
+	config [label=<<b>config</b><br /><br /><i>dict</i>> fillcolor="#b4d8e4" fontname=Helvetica margin=0.15 shape=rectangle style="rounded,filled"]
+	load_data [label=<<b>load_data</b><br /><br /><i>list</i>> fillcolor="#b4d8e4" fontname=Helvetica margin=0.15 shape=rectangle style="rounded,filled"]
+	get_response_from_openai [label=<<b>get_response_from_openai</b><br /><br /><i>str</i>> fillcolor="#FFC857" fontname=Helvetica margin=0.15 shape=rectangle style="rounded,filled"]
+	get_input_query [label=<<b>get_input_query</b><br /><br /><i>str</i>> fillcolor="#b4d8e4" fontname=Helvetica margin=0.15 shape=rectangle style="rounded,filled"]
+	load_data -> setup_falkordb
+	config -> setup_falkordb
+	diffbot_setup -> load_data
+	config -> load_data
+	setup_falkordb -> get_response_from_openai
+	get_input_query -> get_response_from_openai
+	subgraph cluster__legend {
+		graph [fillcolor="#ffffff" fontname=helvetica label=Legend rank=same]
+		function [fillcolor="#b4d8e4" fontname=Helvetica margin=0.15 shape=rectangle style="rounded,filled"]
+		output [fillcolor="#FFC857" fontname=Helvetica margin=0.15 shape=rectangle style="rounded,filled"]
+	}
+}

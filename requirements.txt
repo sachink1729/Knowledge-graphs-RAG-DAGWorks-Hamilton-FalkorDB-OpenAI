@@ -1,0 +1,5 @@
+langchain
+langchain-experimental
+langchain-openai
+falkordb
+sf-hamilton[visualization]
