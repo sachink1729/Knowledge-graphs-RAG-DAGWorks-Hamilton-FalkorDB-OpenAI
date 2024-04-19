@@ -9,14 +9,14 @@ from langchain.chains import FalkorDBQAChain
 from types import ModuleType
 import pickle
 
-os.environ['OPENAI_API_KEY']="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"
+os.environ['OPENAI_API_KEY']="your api key"
 
 def config() -> dict:
     return {"query" : "Warren Buffett",
             "graph_type" : "custom"}
 
 def diffbot_setup() -> ModuleType:
-    diffbot_api_key = "a048854dd6c18c04c376beffea4165d5"
+    diffbot_api_key = "your api key"
     diffbot_nlp = DiffbotGraphTransformer(diffbot_api_key=diffbot_api_key)
     return diffbot_nlp
 
