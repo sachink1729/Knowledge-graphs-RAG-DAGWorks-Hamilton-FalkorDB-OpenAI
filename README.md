@@ -7,3 +7,4 @@ Creating Knowledge Graphs and Productionalizing your RAG model with using Dagwor
 pip install -r requirements.txt
 ```
 -------------------------------------------------------------------------------------------------------
+![](https://github.com/sachink1729/Knowledge-graphs-RAG-DAGWorks-Hamilton-FalkorDB-Diffbot-OpenAI/blob/main/visual.png)
